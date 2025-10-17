@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { Tabs } from './lib/Tabs';
+import { Tabs } from 'mate-academy/react_tabs-js';
 import { Tab } from './types/Tab';
 import React from 'react';
 
@@ -20,8 +20,9 @@ export const TabsPage: React.FC<Props> = ({ tabs }) => {
           id: tab.id,
           title: (
             <Link
+              data-cy="Tab"
               to={`/tabs/${tab.id}`}
-              className={tab.id === tabId ? 'is-active' : ''}
+              className={tab.id === tabId ? 'is-active' : undefined }
             >
               {tab.title}
             </Link>
