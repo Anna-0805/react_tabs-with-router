@@ -1,10 +1,10 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { Tabs } from  "mate-academy/react_tabs-js";
-import { Tab } from "./types/Tab";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Tabs } from './Tabs';
+import { Tab } from './types/Tab';
 
 export const TabsPage: React.FC = () => {
-  const { tabId } = useParams<{ tabId: string}>();
+  const { tabId } = useParams<{ tabId: string }>();
 
   const tabs: Tab[] = [
     { id: 'tab-1', title: 'Tab 1', content: 'Some text 1' },
@@ -35,7 +35,7 @@ export const TabsPage: React.FC = () => {
       />
       <div className="block" data-cy="TabContent">
         {activeTab ? activeTab.content : 'Please select a tab'}
-        </div>
+      </div>
     </div>
   );
 };
