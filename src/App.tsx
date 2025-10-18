@@ -3,13 +3,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-export const App = () => {
+export const App: React.FC = () => {
   const location = useLocation();
-
   const currentPath = location.pathname;
-
   const isHomeActive = currentPath === '/' || currentPath === '/home';
-
   const isTabsActive =
     currentPath === '/tabs' || currentPath.startsWith('/tabs/');
 
